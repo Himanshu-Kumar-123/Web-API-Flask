@@ -14,7 +14,7 @@ jobs:
 
     steps:
     - name: giving access of our repository to workflow
-    - uses: actions/checkout@v4
+      uses: actions/checkout@v4
     
     - name: Set up Python 3.9.13
       uses: actions/setup-python@v3
