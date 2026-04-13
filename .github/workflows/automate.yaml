@@ -31,7 +31,7 @@ jobs:
         pytest
 
       job_2:
-        needs : ci job # Ensure that job_2 runs only after job_1 completes successfully
+        needs : job_1 # Ensure that job_2 runs only after job_1 completes successfully
         runs-on: ubuntu-latest
         environment: production
 
