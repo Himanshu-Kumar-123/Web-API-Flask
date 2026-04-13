@@ -8,7 +8,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  job1(ci):
+  job_1:
     runs-on: ubuntu-latest
 
     steps:
@@ -30,8 +30,8 @@ jobs:
       run: |
         pytest
 
-      job2(cd):
-        needs : ci job # Ensure that job2 runs only after job1 completes successfully
+      job_2:
+        needs : ci job # Ensure that job_2 runs only after job_1 completes successfully
         runs-on: ubuntu-latest
         environment: production
 
