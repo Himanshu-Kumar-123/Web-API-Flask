@@ -30,12 +30,12 @@ jobs:
       run: |
         pytest
 
-    job2:
-      needs : job_1 # Ensure that job2 runs only after job1 completes successfully
-      runs-on: ubuntu-latest
-      environment: production
+  job2:
+    needs: job1 # Ensure that job2 runs only after job1 completes successfully
+    runs-on: ubuntu-latest
+    environment: production
 
-      steps:
+    steps:
       - name: giving access of our repository to workflow
         uses: actions/checkout@v4
 
